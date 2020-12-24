@@ -2,7 +2,9 @@
 *
 * # Example: 01-public-routing
 * Creates:
-*
+* - vpc
+* - public subnets
+* - routing
 *
 * ## Usage
 *
@@ -18,7 +20,7 @@
 data "aws_availability_zones" "available" {}
 
 module "custom_vpc" {
-  source               = "../../../custom_vpc"
+  source               = "github.com/wheelq/tf-aws-lab-modules//custom_vpc?ref=v.01"
   name                 = var.name
   cidr_block           = var.cidr_block
   enable_dns_support   = var.enable_dns_support
@@ -30,7 +32,7 @@ module "custom_vpc" {
 }
 
 module "public_subnets" {
-  source             = "../../../subnets"
+  source             = "github.com/wheelq/tf-aws-lab-modules//subnets?ref=v.01"
   name               = var.name
   vpc_id             = module.custom_vpc.vpc_id
   availability_zones = data.aws_availability_zones.available.names
@@ -42,7 +44,7 @@ module "public_subnets" {
 }
 
 module "public_routing" {
-  source                 = "../../"
+  source                 = "github.com/wheelq/tf-aws-lab-modules//routing?ref=v.01"
   name                   = var.name
   vpc_id                 = module.custom_vpc.vpc_id
   subnets                = module.public_subnets.subnets_ids

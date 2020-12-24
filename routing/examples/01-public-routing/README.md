@@ -1,6 +1,9 @@
 
 # Example: 01-public-routing  
 Creates:
+- vpc
+- public subnets
+- routing
 
 ## Usage
 

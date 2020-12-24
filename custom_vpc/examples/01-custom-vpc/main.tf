@@ -17,7 +17,7 @@
 */
 
 module "custom_vpc" {
-  source               = "../../"
+  source               = "github.com/wheelq/tf-aws-lab-modules//custom_vpc?ref=v.01"
   name                 = var.name
   cidr_block           = var.cidr_block
   enable_dns_support   = var.enable_dns_support
