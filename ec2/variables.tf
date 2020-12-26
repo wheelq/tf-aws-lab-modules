@@ -57,3 +57,9 @@ variable "ami_id" {
   description = "AMI id to be used for EC2"
   type        = string
 }
+
+variable "vpc_security_group_ids" {
+  description = "List of SG attached to this instance"
+  type        = list(string)
+  default     = []
+}

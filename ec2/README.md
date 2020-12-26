@@ -29,6 +29,7 @@
 | public\_key | public key value | `string` | `""` | no |
 | subnet\_ids | Subnets IDs to be associated with the route table | `list(string)` | n/a | yes |
 | tags | A map of tags to add to all resources | `map(string)` | `{}` | no |
+| vpc\_security\_group\_ids | List of SG attached to this instance | `list(string)` | `[]` | no |
 
 ## Outputs
 
