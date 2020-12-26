@@ -47,7 +47,7 @@ data "aws_subnet_ids" "default" {
 }
 
 module "ec2_instance" {
-  source                      = "../../"
+  source                      = "github.com/wheelq/tf-aws-lab-modules//ec2?ref=v0.1"
   name                        = var.name
   ami_id                      = data.aws_ami.amazon_linux.id
   instance_name               = var.instance_name
