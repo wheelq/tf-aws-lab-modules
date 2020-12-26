@@ -20,7 +20,7 @@ data "aws_vpc" "default" {
 }
 
 module "ssh_group" {
-  source      = "../../"
+  source      = "github.com/wheelq/tf-aws-lab-modules//sg/sg_group?ref=v0.1"
   name        = var.name
   group_name  = var.group_name
   vpc_id      = data.aws_vpc.default.id

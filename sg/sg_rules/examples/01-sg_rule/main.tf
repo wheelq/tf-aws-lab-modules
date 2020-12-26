@@ -20,7 +20,7 @@ data "aws_vpc" "default" {
 }
 
 module "ssh_group" {
-  source      = "../../../sg_group"
+  source      = "github.com/wheelq/tf-aws-lab-modules//sg/sg_group?ref=v0.1"
   name        = var.name
   group_name  = var.group_name
   description = var.description
@@ -29,7 +29,7 @@ module "ssh_group" {
 }
 
 module "sg_ingress_ssh" {
-  source            = "../../"
+  source            = "github.com/wheelq/tf-aws-lab-modules//sg/sg_rules?ref=v0.1"
   security_group_id = module.ssh_group.security_group_id
   type              = var.ingress_type
   protocol          = var.ingress_protocol
@@ -39,7 +39,7 @@ module "sg_ingress_ssh" {
 }
 
 module "sg_egress_ssh" {
-  source            = "../../"
+  source            = "github.com/wheelq/tf-aws-lab-modules//sg/sg_rules?ref=v0.1"
   security_group_id = module.ssh_group.security_group_id
   type              = var.egress_type
   protocol          = var.egress_protocol
