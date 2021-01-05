@@ -1,3 +1,18 @@
+
+# Example: create\_lock\_table  
+Creates:
+- DynamoDB tablo used for locks
+
+## Usage
+
+To run this example you need to execute:
+
+```bash
+$ terraform init
+$ terraform plan
+$ terraform apply
+```
+
 ## Requirements
 
 | Name | Version |
