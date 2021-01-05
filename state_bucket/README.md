@@ -1,7 +1,7 @@
 
 # State bucket used to store terraform state files  
 This module creates S3 bucket, used by Terraform to store its state files  
-Please go to [examples](examples) for more information
+Please go to [example](example/create\_bucket) for more information
 
 ## Requirements
 

@@ -2,8 +2,7 @@
 *
 * # DynamoDB for TF locks
 * This module creates DynamoDB table, used for the Terraform locks
-* Please go to [examples](examples)
-*
+* Please go to [example](examples/create_lock_table)
 * ## Usage
 *
 */
