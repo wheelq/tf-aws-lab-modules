@@ -13,10 +13,13 @@ Do not use this in production!
 |------|---------|
 | terraform | > 0.13.3 |
 | aws | ~> 3.22.0 |
+| random | 3.0.0 |
 
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| random | 3.0.0 |
 
 ## Inputs
 

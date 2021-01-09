@@ -10,10 +10,12 @@
 *
 */
 
+resource "random_pet" "example" {}
+
 module "generate_key" {
   name               = "tfdemo"
   source             = "../../"
-  key_name           = "test_public_key"
+  key_name           = random_pet.example.id
   download_publickey = true
   environment        = "dev"
 }
