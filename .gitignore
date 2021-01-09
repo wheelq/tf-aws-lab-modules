@@ -36,3 +36,6 @@ terraform.rc
 *.plan
 *.out
 *.log
+
+# Ignore private keys
+*.pem

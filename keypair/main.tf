@@ -35,6 +35,6 @@ resource "aws_key_pair" "stored" {
 
 resource "local_file" "cloud_pem" {
   count             = var.download_publickey ? 1 : 0
-  filename          = var.key_name
+  filename          = "${var.key_name}.pem"
   sensitive_content = tls_private_key.key.private_key_pem
 }
