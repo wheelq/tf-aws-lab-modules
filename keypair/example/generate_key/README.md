@@ -24,4 +24,6 @@ No input.
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| key\_name | Key name: |

@@ -1,4 +1,4 @@
 output "key_name" {
   description = "Key name: "
-  value       = aws_key_pair.stored.key_name
+  value       = module.generate_key.key_name
 }
