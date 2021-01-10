@@ -37,3 +37,4 @@ No requirements.
 | Name | Description |
 |------|-------------|
 | key\_name | Private key name |
+| public\_key\_openssh | Public key in openssh format |
