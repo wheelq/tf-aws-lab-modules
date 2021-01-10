@@ -4,24 +4,6 @@
 *
 */
 
-resource "aws_key_pair" "user_key" {
-  count      = var.key_name == "" ? 0 : 1
-  key_name   = var.key_name
-  public_key = var.public_key
-  tags = merge(
-    {
-      "Name" = format(
-        "%s-${var.key_name}",
-        var.name
-      )
-      }, {
-      Terraform   = "true"
-      Environment = var.environment
-    },
-    var.tags
-  )
-}
-
 resource "aws_instance" "instance" {
   for_each                    = toset(var.subnet_ids)
   ami                         = var.ami_id

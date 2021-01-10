@@ -20,25 +20,26 @@ $ terraform apply
 |------|---------|
 | terraform | > 0.13.3 |
 | aws | ~> 3.22.0 |
+| random | 3.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | aws | ~> 3.22.0 |
+| random | 3.0.0 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| associate\_public\_ip\_address | Enable public IP assignment to EC2 instance | `bool` | n/a | yes |
 | environment | Environment name | `string` | n/a | yes |
-| instance\_name | Name of the instance | `string` | n/a | yes |
-| instance\_type | Instance type | `string` | n/a | yes |
-| key\_name | public key name | `string` | `""` | no |
 | name | Name to be used on all the resources as identifier | `string` | n/a | yes |
-| public\_key | public key value | `string` | `""` | no |
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| connection\_details | Connect to the new EC2 instances using: |
+| ec2\_public\_ips | Public IPs of EC2 instances |
+| key\_name | Key name created in AWS |

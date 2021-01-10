@@ -33,4 +33,6 @@
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| public\_ips | Instances public IPs |

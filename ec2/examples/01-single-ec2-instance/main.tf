@@ -46,15 +46,24 @@ data "aws_subnet_ids" "default" {
   vpc_id = data.aws_vpc.default.id
 }
 
+resource "random_pet" "example" {}
+
+module "generate_key" {
+  name               = var.name
+  source             = "github.com/wheelq/tf-aws-lab-modules//keypair?ref=v0.5"
+  key_name           = "${var.name}-${random_pet.example.id}"
+  download_publickey = true
+  environment        = var.environment
+}
+
 module "ec2_instance" {
-  source                      = "github.com/wheelq/tf-aws-lab-modules//ec2?ref=v0.1"
+  source                      = "../../"
   name                        = var.name
   ami_id                      = data.aws_ami.amazon_linux.id
-  instance_name               = var.instance_name
-  instance_type               = var.instance_type
+  instance_name               = "demoinstance"
+  instance_type               = "t2.micro"
   subnet_ids                  = data.aws_subnet_ids.default.ids
-  associate_public_ip_address = var.associate_public_ip_address
-  key_name                    = var.key_name
-  public_key                  = var.public_key
+  associate_public_ip_address = true
+  key_name                    = module.generate_key.key_name
   environment                 = var.environment
 }
