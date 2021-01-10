@@ -36,4 +36,4 @@ No requirements.
 
 | Name | Description |
 |------|-------------|
-| key\_name | Key name: |
+| key\_name | Private key name |

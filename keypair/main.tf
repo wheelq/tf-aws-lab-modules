@@ -37,4 +37,7 @@ resource "local_file" "cloud_pem" {
   count             = var.download_publickey ? 1 : 0
   filename          = "${var.key_name}.pem"
   sensitive_content = tls_private_key.key.private_key_pem
+  provisioner "local-exec" {
+    command = "chmod 600 ${var.key_name}.pem"
+  }
 }
