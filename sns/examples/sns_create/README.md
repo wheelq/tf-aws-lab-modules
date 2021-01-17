@@ -19,4 +19,5 @@ No input.
 
 | Name | Description |
 |------|-------------|
-| topic\_arn | Topic ARN |
+| sns\_topic\_arn | SNS Topic ARN |
+| sns\_topic\_dump | SNS Topic dump |

@@ -12,12 +12,11 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| account\_id | Account ID for SNS topic policy | `number` | n/a | yes |
-| sns\_topic\_name | SNS Topic name | `string` | n/a | yes |
+| policy | SNS Policy document as JSON | `string` | n/a | yes |
+| sns\_topic\_arn | The ARN of the SNS topic | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| sns\_topic\_arn | SNS Topic ARN |
-| sns\_topic\_dump | SNS Topic dump |
+| sns\_topic\_policy | SNS Topic policy |
