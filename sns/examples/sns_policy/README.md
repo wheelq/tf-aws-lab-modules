@@ -19,5 +19,5 @@ No input.
 
 | Name | Description |
 |------|-------------|
-| sns\_topic\_arn | SNS Topic ARN |
-| sns\_topic\_policy | SNS Topic policy - dump |
+| sns\_topic\_policy | SNS Topic policy |
+| sns\_topic\_policy\_arn | SNS Topic ARN |

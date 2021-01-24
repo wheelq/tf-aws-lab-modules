@@ -20,3 +20,4 @@ No requirements.
 | Name | Description |
 |------|-------------|
 | sns\_topic\_policy | SNS Topic policy |
+| sns\_topic\_policy\_arn | SNS Topic policy ARN |
