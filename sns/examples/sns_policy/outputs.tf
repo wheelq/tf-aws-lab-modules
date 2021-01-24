@@ -1,6 +1,6 @@
 output "sns_topic_policy" {
   description = "SNS Topic policy"
-  value       = module.sns_policy_attachment.sns_topic_policy
+  value       = module.sns_policy.sns_topic_policy
 }
 
 output "sns_topic_policy_arn" {

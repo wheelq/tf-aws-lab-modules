@@ -10,7 +10,7 @@ module "sns_create" {
   sns_topic_name = "my-awesome-topic-name"
 }
 
-module "sns_policy_attachment" {
+module "sns_policy" {
   source        = "../../sns_policy"
   sns_topic_arn = module.sns_create.sns_topic_arn
   policy        = data.aws_iam_policy_document.sns_topic_policy.json
